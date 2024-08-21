@@ -37,5 +37,3 @@ try:
         print(f'Prezado(a) {nome_usuario}.  Seu salário é de R${salario_usuario:.2f} e seu bônus final será de R${valor_bonus:.2f}')
 except ValueError:
     print("Erro! Verifique salário e bonus informados.")
-#print('Olá {}, seu bônus foi de R$ {}'.format(nome_usuario, valor_bonus))
-#print(f"{nome_usuario}, o seu bônus será de R${valor_bonus}")
