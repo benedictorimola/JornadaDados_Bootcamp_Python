@@ -13,7 +13,7 @@ Isso envolve adicionar verificações adicionais após a tentativa de conversão
 constante_bonus = 1000
 try:
     print("Desafio KPI Aula01 - Refatoração")
-    nome_usuario = input("Informe seu nome: ")
+    nome_usuario = input("Informe seu nome: ").strip().upper()
     salario_usuario = float(input("Informe seu salário: "))
     bonus_usuario = float(input("Informe o seu bônus: "))
     msg_erro = ""
