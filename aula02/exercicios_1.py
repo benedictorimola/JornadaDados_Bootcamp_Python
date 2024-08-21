@@ -45,6 +45,7 @@ Utilize if-elif-else para realizar a operação matemática baseada no operador 
 Imprima o resultado ou uma mensagem de erro apropriada. """
 
 """ try:
+    print("Exercício 23: Calculadora Simples")
     valor_1 = float(input("Informe o primeiro valor: "))
     valor_2 = float(input("Informe o segundo valor : "))
     operador = str(input("Informe a operação aritiméca (adição(+), subtração(-), divisão(/) ou multiplicação(*)): ")).strip()
@@ -71,6 +72,7 @@ Escreva um programa que solicite ao usuário para digitar um número.
 Utilize try-except para assegurar que a entrada seja numérica e utilize if-elif-else para classificar o número como "positivo", "negativo" ou "zero". 
 Adicionalmente, identifique se o número é "par" ou "ímpar".    """
 """ try: 
+    print("Exercício 24: Classificador de Números")
     numero = int(input("Informe um número inteiro: "))
     if numero == 0:
         classifica_numero = "é zero"
@@ -95,6 +97,7 @@ Utilize try-except para tratar a conversão de cada número e validar que cada e
 Se a conversão falhar ou um elemento não for um inteiro, imprima uma mensagem de erro. 
 Se a conversão for bem-sucedida para todos os elementos, imprima a lista de inteiros.     """
 try:
+    print("Exercício 25: Conversão de Tipo com Validação")
     lista_numeros = input("Digite uma lista de números separados por vírgula: ")
     numeros_str = lista_numeros.split(",")
     numeros_int = []
