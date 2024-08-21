@@ -16,19 +16,22 @@ try:
     nome_usuario = input("Informe seu nome: ")
     salario_usuario = float(input("Informe seu salário: "))
     bonus_usuario = float(input("Informe o seu bônus: "))
-    msg_erro = None
+    msg_erro = ""
     if salario_usuario <= 0 or bonus_usuario <= 0 or len(nome_usuario) == 0:
         if len(nome_usuario) == 0:
             # print('Informe nome de usuário. \n')
             msg_erro = 'Informe nome de usuário. \n'
         if salario_usuario <= 0:
             #print(f'Salário informado {salario_usuario} deve ser maior que zero')
-            msg_erro = msg_erro + f'Salário informado {salario_usuario} deve ser maior que zero'
+            msg_erro = msg_erro + f'Salário informado {salario_usuario} deve ser maior que zero \n'
         if bonus_usuario <= 0:
-            msg_erro = msg_erro + f'Bonus informado {bonus_usuario} deve ser maior que zero'
+            msg_erro = msg_erro + f'Bonus informado {bonus_usuario} deve ser maior que zero \n'
             #print(f'Bonus informado {bonus_usuario} deve ser maior que zero')
         if len(msg_erro) > 0:
             print(msg_erro)
+    elif any(char.isdigit() for char in nome_usuario):
+        msg_erro = f'Nome informado: {nome_usuario}. Nome usuário não deve conter números.'
+        print(msg_erro)
     else:
         valor_bonus = (constante_bonus + salario_usuario * bonus_usuario) - salario_usuario
         print(f'Prezado(a) {nome_usuario}.  Seu salário é de R${salario_usuario:.2f} e seu bônus final será de R${valor_bonus:.2f}')
